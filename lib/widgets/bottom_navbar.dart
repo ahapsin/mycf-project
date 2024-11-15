@@ -12,11 +12,11 @@ class HBottomNavbar extends StatelessWidget {
       selectedFontSize: 10,
       unselectedFontSize: 10,
       elevation: 0,
-      backgroundColor: highlightColor,
+      backgroundColor: whiteColor,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: 'Beranda',
+          label: 'TAIII',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.assessment),

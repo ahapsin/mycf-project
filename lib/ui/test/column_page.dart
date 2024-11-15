@@ -12,7 +12,7 @@ class ColumnPage extends StatelessWidget {
           if (MediaQuery.of(context).size.width > 600) {
             return Row(
               children: [
-                FormSignIn(),
+                ListTile(title: Text('Menu Item 1')),
               ],
             );
           } else {

@@ -25,9 +25,6 @@ class SigninPage extends StatelessWidget {
                   image: DecorationImage(
                       image: AssetImage('assets/light_logo.png'))),
             ),
-            const SizedBox(
-              height: 82,
-            ),
             Text(
               'Welcome!',
               style: blackTextStyle.copyWith(fontSize: 24, fontWeight: black),

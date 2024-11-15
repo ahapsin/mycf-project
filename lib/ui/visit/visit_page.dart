@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mycf/shared/themes.dart';
 import 'package:mycf/ui/visit/form_visit_page.dart';
-import 'package:mycf/widgets/item_visit.dart';
+import 'package:mycf/widgets/bottom_navbar.dart';
+import 'package:mycf/widgets/component/organism/list.dart';
 
 class VisitPage extends StatelessWidget {
   const VisitPage({super.key});
@@ -28,22 +29,9 @@ class VisitPage extends StatelessWidget {
         ],
         centerTitle: true,
       ),
+      bottomNavigationBar: HBottomNavbar(),
       backgroundColor: whiteColor,
-      body: ListView(
-        padding: EdgeInsets.all(14),
-        children: [
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-          HItemVisit(),
-        ],
-      ),
+      body: ListStyled(),
     );
   }
 }

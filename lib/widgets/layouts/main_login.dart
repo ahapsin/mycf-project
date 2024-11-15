@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mycf/shared/themes.dart';
 import 'package:mycf/ui/onboarding_page.dart';
+
 import 'package:mycf/widgets/organism/form_signin.dart';
 
 class MainLoginPage extends StatelessWidget {
@@ -16,7 +16,6 @@ class MainLoginPage extends StatelessWidget {
               crossAxisCount: 2,
               children: [
                 Container(
-                  padding: EdgeInsets.all(200),
                   child: FormSignin(),
                 ),
                 Container(padding: EdgeInsets.all(20), child: OnBoardingPage()),
@@ -24,7 +23,7 @@ class MainLoginPage extends StatelessWidget {
             );
           } else {
             return Container(
-              padding: EdgeInsets.all(50),
+              padding: EdgeInsets.all(25),
               child: FormSignin(),
             );
           }

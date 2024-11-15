@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mycf/shared/themes.dart';
-import 'package:mycf/ui/logged_user_page.dart';
+import 'package:mycf/ui/home_page.dart';
 import 'package:mycf/widgets/button_filled.dart';
-import 'package:mycf/widgets/navigation_rail_extend.dart';
+
 import 'package:mycf/widgets/text_field.dart';
 
 class FormSignin extends StatelessWidget {
@@ -13,41 +13,21 @@ class FormSignin extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          const SizedBox(
-            height: 65,
-          ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 80,
-                height: 80,
+                width: 188,
+                margin: EdgeInsets.only(top: 50),
+                height: 42,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/light_logo.png'))),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  'BPR CAHAYA FAJAR!',
-                  style:
-                      blueTextStyle.copyWith(fontSize: 24, fontWeight: black),
-                ),
-              ),
             ],
           ),
           const SizedBox(
-            height: 82,
-          ),
-          Text(
-            'Welcome!',
-            style: blackTextStyle.copyWith(fontSize: 24, fontWeight: black),
-          ),
-          Text(
-            'Welcome login here to access your account!',
-            style: grayTextStyle.copyWith(fontSize: 14),
-          ),
-          const SizedBox(
-            height: 50,
+            height: 80,
           ),
           const HTextField(
             withLabel: false,
@@ -56,15 +36,16 @@ class FormSignin extends StatelessWidget {
             preicon: Icon(Icons.account_circle_rounded),
           ),
           const SizedBox(
-            height: 16,
+            height: 32,
           ),
-          const HTextField(
+          HTextField(
             withLabel: false,
             label: 'Password',
             placeholder: 'Password',
             secure: true,
             preicon: Icon(Icons.key),
-            suficon: Icon(Icons.remove_red_eye_outlined),
+            suficon: TextButton(
+                onPressed: () {}, child: Icon(Icons.remove_red_eye_outlined)),
           ),
           const SizedBox(
             height: 20,
@@ -79,10 +60,8 @@ class FormSignin extends StatelessWidget {
           HButtonFilled(
             title: 'Login',
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const LoggedUserPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const HomePage()));
             },
           ),
           const SizedBox(

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mycf/shared/themes.dart';
 
-class HButtonFilled extends StatelessWidget {
+class HButtonCircle extends StatelessWidget {
   final String title;
   final double width;
   final double height;
   final VoidCallback? onPressed;
 
-  const HButtonFilled({
+  const HButtonCircle({
     super.key,
     required this.title,
     this.width = double.infinity,
@@ -18,19 +18,18 @@ class HButtonFilled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 50,
+      width: 40,
+      height: 40,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-          backgroundColor: overBlueColor,
-          padding: const EdgeInsets.symmetric(vertical: 15),
+          backgroundColor: whiteColor,
           shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10))),
+              borderRadius: BorderRadius.all(Radius.circular(100))),
         ),
         child: Text(
           title,
-          style: whiteTextStyle.copyWith(fontWeight: FontWeight.w800),
+          style: blackTextStyle.copyWith(fontWeight: FontWeight.w800),
         ),
       ),
     );

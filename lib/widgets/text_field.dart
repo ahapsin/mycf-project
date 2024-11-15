@@ -35,6 +35,7 @@ class HTextField extends StatelessWidget {
               )
             : const SizedBox(),
         TextFormField(
+          obscureText: secure,
           style: blackTextStyle.copyWith(fontWeight: black),
           decoration: InputDecoration(
               errorBorder: const OutlineInputBorder(
@@ -48,7 +49,7 @@ class HTextField extends StatelessWidget {
               suffixIconColor: grayColor,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  borderSide: BorderSide(color: ligthGrayColor, width: 2)),
+                  borderSide: BorderSide(color: grayColor, width: 2)),
               errorText: error,
               prefixIcon: preicon,
               suffixIcon: suficon),
